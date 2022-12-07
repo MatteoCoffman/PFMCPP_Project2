@@ -17,14 +17,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+    int
+    float
+    bool
+    double
+    char
+    unsigned int
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -63,12 +61,32 @@ video: Chapter 2 - Part 3
 //2)
 void variableDeclarations()
 {
-    //example:
-    int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    int x = 5;
+    int y = 10;
+    int cutoff = 23000;
+
+    float weight = 12.08933f;
+    float height = 7.9935f;
+    float width = 88.4458f;
+
+    bool isOn = true;
+    bool hasMass = false;
+    bool mono = true;
+
+    double price = 11.99;
+    double taxRate = 8.75;
+    double gpa = 3.14;
+
+    char finalGrade = 'a';
+    char tier = 's';
+    char firstLetter = 'c';
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    unsigned int filterCutoff = 128;
+    unsigned int rate = 255;
+    unsigned int variation = 0;
+    
+    ignoreUnused(x, y, cutoff, weight, height, width, isOn, hasMass, mono, price, taxRate, gpa, finalGrade, tier, firstLetter, filterCutoff, rate, variation);
 }
 
 /*
@@ -82,45 +100,66 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
     return {}; //if your function returns something other than void, add 'return {};' at the end of it.
 } 
 
-/*
- 1)
- */
 
-/*
- 2)
- */
+ 1) bool takeVote(int numberOfVotes, bool forOrAgainst)
+    {
+        ignoreUnused(numberOfVotes, forOrAgainst);
+        return {};
+    }
+ 
+ 2) char getGrade(double examAvg = 87.50, double homeworkAvg = 93.75)
+    {
+        ignoreUnused(examGrade, homeworkGrade);
+        return {};
+    }
+ 
+ 3) float getVolume(float height, float width, float depth)
+    {
+        ignoreUnused(height, width, depth);
+        return {};
+    }
 
-/*
- 3)
- */
+ 4) bool startTraktor(bool brakeOn = true, bool hasKey = true)
+    {
+        ignoreUnused(brakeOn, hasKey);
+        return {};
+    }
 
-/*
- 4)
- */
+ 5) bool creditCheck(int creditScore = 700, bool hasScore = true)
+    {
+        ignoreUnused(creditScore, hasScore);
+        return {};
+    }
 
-/*
- 5)
- */
+ 6) char setTier(double winRate = 51.47, double pickRate = 6.71, double banRate = 10.22)
+    {
+       ignoreUnused(winRate, pickRate, banRate);
+        return {};
+    }
 
-/*
- 6)
- */
+ 7) float takeAvg(int test1Grade, int test2Grade)
+    {
+        ignoredUnused(test1Grade, test2Grade);
+        return {};
+    }
 
-/*
- 7)
- */
+ 8) char setColor(unsinged int levelRed, unsinged int levelGreen, unsinged int levelBlue)
+    {
+        ignoreUnused(levelRed, levelGreen, levelBlue);
+        return {};
+    }
 
-/*
- 8)
- */
+ 9) bool startLaptop(int batteryLevel, bool powerSwitchOnOff)
+    {
+        ignoreUnused(batteryLevel, powerSwitchOnOff);
+        return {};
+    }
 
-/*
- 9)
- */
-
-/*
- 10)
- */
+ 10) unsigned int setVolume(unsigned int level = 50, unsigned int gain = 25, bool boost = true)
+     {
+         ignoreUnused(level, gain, boost);
+         return {};
+     }
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,25 +180,25 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
+    1) auto voteResult = takeVote(127, true);
     
-    //2)
+    2) char letterGrade = getGrade(67.93, 86.75);
     
-    //3)
+    3) auto volume = getVolume(17.994f, 8.655f, 0.01125f);
     
-    //4)
+    4) auto traktorRunning = startTraktor(true, false);
     
-    //5)
+    5) bool creditCheckPassed = creditCheck(800, true);
     
-    //6)
+    6) char tier = setTier(47.89, 1.29, 0.87);
     
-    //7)
+    7) auto avg = takeAvg(76, 87);
     
-    //8)
+    8) auto color = getColor(127, 0, 230);
     
-    //9)
+    9) auto laptopOnOff = startLaptop(100, true);
     
-    //10)
+    10) auto Volume = setVolume(50, 25, true);
     
     
     ignoreUnused(carRented);
