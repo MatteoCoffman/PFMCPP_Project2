@@ -9,6 +9,7 @@ video: Chapter 2 - Part 3
  Declarations Tasks
 
  Create a branch named Part1
+ Test Commit
 
  Purpose:  This project will teach you how to declare variables and free functions.  
  This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
